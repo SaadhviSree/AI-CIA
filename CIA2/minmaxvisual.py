@@ -2,24 +2,6 @@ import streamlit as st
 import networkx as nx
 import matplotlib.pyplot as plt
 import math
-import tempfile
-import matplotlib.animation as animation
-from io import BytesIO
-
-def create_animation(steps, G, interval=1000):
-    fig, ax = plt.subplots(figsize=(12, 8))
-    
-    def update(i):
-        ax.clear()  # Clear the axes
-        step = steps[i]
-        draw_tree(G, step, ax=ax)  # Pass ax to draw_tree to reuse the figure
-    
-    ani = animation.FuncAnimation(fig, update, frames=len(steps), interval=interval, repeat=False)
-    
-    # Create a temporary file for the animation
-    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.mp4')
-    ani.save(temp_file.name, writer='ffmpeg')  # Save as an MP4 video
-    temp_file.close()
 
 def minmax(depth, nodeIndex, isMaximizingPlayer, values, maxDepth):
     if depth == maxDepth:
