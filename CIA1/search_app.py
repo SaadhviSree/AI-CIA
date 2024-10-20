@@ -61,9 +61,9 @@ def main():
         positions = get_positions(graph)
 
         st.write("Generated Graph:")
-        fig, ax = plt.subplots(figsize=(4, 4))
+        fig, ax = plt.subplots(figsize=(10, 10))
         img_path = draw_graph(graph, positions)  # Draw graph and get image path
-        st.image(img_path, use_column_width=False, width=400)
+        st.image(img_path, use_column_width=False, width=600)
         st.markdown(
             """
             <style>
@@ -137,9 +137,9 @@ def main():
                     st.write("Graph with Each Path Highlighted:")
                     for idx, path in enumerate(paths_found):
                         st.success(f"Path {idx + 1}: {path}")
-                        fig, ax = plt.subplots(figsize=(4, 4))
+                        fig, ax = plt.subplots(figsize=(10, 10))
                         img_path = draw_graph(graph, positions, path)  # Draw graph and get image path
-                        st.image(img_path, use_column_width=False, width=400)
+                        st.image(img_path, use_column_width=False, width=600)
                         st.markdown(
                             """
                             <style>
@@ -156,9 +156,9 @@ def main():
                     st.write("Graph with Path Highlighted:")
                     st.success(f"Path Found: {path_found}")
                     st.success(f"Oracle Value : {oracle_value}")
-                    fig, ax = plt.subplots(figsize=(4, 4))
-                    img_path = draw_graph(graph, positions, path)  # Draw graph and get image path
-                    st.image(img_path, use_column_width=False, width=400)
+                    fig, ax = plt.subplots(figsize=(10, 10))
+                    img_path = draw_graph(graph, positions, path_found)  # Draw graph and get image path
+                    st.image(img_path, use_column_width=False, width=600)
                     st.markdown(
                         """
                         <style>
@@ -173,9 +173,9 @@ def main():
                 else:
                     st.write("Graph with Path Highlighted:")
                     st.success(f"Path Found: {path_found}")
-                    fig, ax = plt.subplots(figsize=(4, 4))
-                    img_path = draw_graph(graph, positions, path)  # Draw graph and get image path
-                    st.image(img_path, use_column_width=False, width=400)
+                    fig, ax = plt.subplots(figsize=(10, 10))
+                    img_path = draw_graph(graph, positions, path_found)  # Draw graph and get image path
+                    st.image(img_path, use_column_width=False, width=600)
                     st.markdown(
                         """
                         <style>
