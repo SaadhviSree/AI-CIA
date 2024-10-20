@@ -127,7 +127,7 @@ This app visualizes the Minimax algorithm on a binary tree.
 """)
 
 depth = st.slider('Select tree depth', 1, 5, 2)
-values_input = st.text_input('Enter leaf node values (comma-separated)', '10, 5, 6, 7')
+values_input = st.text_input('Enter leaf node values (comma-separated)')
 is_maximizing = st.radio("Select the root player's strategy", ('Maximizing', 'Minimizing')) == 'Maximizing'
 
 if st.button('Run Minimax'):
